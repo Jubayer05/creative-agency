@@ -1,0 +1,15 @@
+.contact {
+    background-color: #fbd062;
+    padding: 50px 0 5px 0;
+}
+.contact__title {
+    font-size: 34px;
+}
+
+.custom__input {
+    height: calc(2.2em + .75rem + 2px);
+}
+
+.custom__btn {
+    padding: 7px 35px;
+}

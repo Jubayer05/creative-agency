@@ -1,0 +1,17 @@
+.admin__content {
+    background-color: #ffffff;
+    max-width: 90%;
+    min-height: 300px;
+    border-radius: 12px;
+}
+
+.admin__btn {
+    padding: 5px 35px;
+    background-color: #009444;
+}
+
+.upload__btn--admin {
+    width: 40%;
+    height: 36px;
+    padding: 0 20px;
+}

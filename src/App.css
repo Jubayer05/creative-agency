@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-brand {
+    background-color: #111430;
+    color: #ffffff;
+    transition: transform 0.1s;
+}
+
+.btn-brand:hover {
+    background-color: #111430;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.text-brand {
+    color: #7AB259;
+}
+
+.logo-brand {
+    width: 180px;
+}
+
+.bg-brand {
+    background-color: #e5e5e5;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+}

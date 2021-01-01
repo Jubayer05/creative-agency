@@ -1,0 +1,57 @@
+.order__dashboard {
+    flex-direction: column;
+}
+
+.main__container {
+    position: relative;
+}
+
+.main__content {
+    max-width: 600px;
+}
+
+.order__dashboard h6{
+    cursor: pointer;
+}
+
+.active__orderPage {
+    color: #009444;
+}
+
+.upload__btn {
+    background-color: rgba(0, 148, 69, 0.2);
+    border: 1px solid rgba(0, 148, 69);
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload__btn img {
+    width: 30px;
+    margin-right: 14px;
+}
+
+.order__content {
+    max-width: 800px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.orderList__card {
+    border-radius: 20px;
+}
+
+.orderList__card--img {
+    width: 70px !important;
+}
+
+.orderList__card--heading {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.orderList__card--text {
+    font-size: 16px;
+    line-height: 20px;
+}

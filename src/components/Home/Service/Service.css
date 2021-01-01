@@ -1,0 +1,24 @@
+.serviceLogo__container {
+    max-width: 80%;
+}
+
+.serviceLogo__container img {
+    width: 140px;
+}
+
+.service-card {
+    max-width: 1140px;
+}
+
+.service__card--item {
+    background-color: #e5e5e5;
+    border: none;
+    transition: all .2s ease-in;
+}
+
+.service__card--item:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow:  0 .5rem 1rem rgba(0,0,0,.15);
+    transform: translateY(-3px)
+}
