@@ -5,6 +5,9 @@ import google from "../../../images/icons/google.png";
 import logo from "../../../images/logos/logo.png";
 import "./Login.css";
 import firebase from "firebase/app";
+import firebaseConfig from '../../../firebase.config';
+
+firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
     const {userInformation} = useContext(CreativeAgency);
