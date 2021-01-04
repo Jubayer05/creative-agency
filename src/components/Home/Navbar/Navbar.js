@@ -27,7 +27,7 @@ const Navbar = () => {
                         <a class="nav-link active" href="#home"><Link to="/addService">Contact Us</Link></a>
                     </li>
                     <li class="nav-item mx-2">
-                    <Link to="/login"><button className="btn btn-brand">Login</button></Link>
+                    <Link to="/createOrder"><button className="btn btn-brand">Login</button></Link>
                     </li>
                 </ul>
                 </div>

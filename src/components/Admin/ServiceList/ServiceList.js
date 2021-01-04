@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../../Order/CreateOrder/CreateOrder.css";
 import logo from "../../../images/logos/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -41,98 +41,17 @@ const serviceList = [
         service: "Jubayer",
         details: "Dynamic Name Dynamic Name Dynamic ",
         status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
-    {
-        name: "Jubayer",
-        email: "jubayer@fortawesome.io",
-        service: "Jubayer",
-        details: "Dynamic Name Dynamic Name Dynamic ",
-        status: "active"
-    },
+    }
 ]
 
 const ServiceList = () => {
-    const handleOption1 = (e) => {
-        // document.getElementById("green").style.color = "red";
-        console.log(document.getElementById("green").value);
-    }
-    const handleOption2 = () => {
-        document.getElementById("green").style.color = "green";
-    }
-    const handleOption3 = () => {
-        document.getElementById("green").style.color = "tomato";
-    }
-    
+    const [value1, setValue1] = useState({
+        pending: "",
+        going: "",
+        done: ""
+    });
+
+        
     return (
         <section>
             <div className="mt-2 container d-flex justify-content-between align-items-center">
@@ -171,10 +90,16 @@ const ServiceList = () => {
                                         <td style={{width:"15%"}}>{item.service}</td>
                                         <td style={{width:"25%"}}>{item.details}</td>
                                         <td style={{width:"10%"}}>
-                                        <select id="green" onChange={handleOption1}>
-                                            <option value="apple" >Apple</option>
-                                            <option value="banana" >Banana</option>
-                                            <option value="grape" >Grape</option>
+                                        <select class="green" >
+                                            { value1 ?  
+                                                <option style={{color: "green"}} value="pending" >Pending</option>
+                                                : 
+                                                <>
+                                                    <option style={{color: "red"}} value="pending" >Pending</option>
+                                                    <option style={{color: "blue"}} value="pending" >Pending</option>
+                                                </>
+                                            }
+                                            
                                         </select>
                                         </td>
                                     </tr>

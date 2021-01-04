@@ -22,3 +22,7 @@
     box-shadow:  0 .5rem 1rem rgba(0,0,0,.15);
     transform: translateY(-3px)
 }
+
+.serviceCardLink:hover {
+    text-decoration: none;
+}

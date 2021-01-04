@@ -13,41 +13,44 @@ import AddService from './components/Admin/AddService/AddService';
 import ServiceList from './components/Admin/ServiceList/ServiceList';
 import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
 import { createContext, useState } from 'react';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 
 export const CreativeAgency = createContext();
 
 function App() {
-  const [userInfo, setUserInfo] = useState({}); 
+  const [userInfo, setUserInfo] = useState({email: ""}); 
   const [adminInfo, setAdminInfo] = useState({}); 
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <CreativeAgency.Provider value={{
+      login: [loggedInUser, setLoggedInUser],
       userInformation: [userInfo, setUserInfo], 
-    adminInformation: [adminInfo, setAdminInfo]}}>
+      adminInformation: [adminInfo, setAdminInfo]}}>
     <Router>
         <Switch>
           <Route path="/login">
             <Login/>
           </Route>
-          <Route path="/createOrder">
-            <CreateOrder/>
-          </Route>
-          <Route path="/orderList">
-            <OrderList/>
-          </Route>
-          <Route path="/orderReview">
-            <OrderReview/>
-          </Route>
+          <PrivateRoute path="/createOrder">
+              <CreateOrder/>             
+          </PrivateRoute>
+          <PrivateRoute path="/orderReview">
+              <OrderReview/>             
+          </PrivateRoute>
+          <PrivateRoute path="/orderList">
+              <OrderList/>            
+          </PrivateRoute>
           <Route path="/addService">
-            <AddService/>
+              <AddService/>
           </Route>
           <Route path="/serviceList">
-            <ServiceList/>
+              <ServiceList/>
           </Route>
           <Route path="/addAdmin">
-            <AddAdmin/>
+              <AddAdmin/>
           </Route>
           <Route path="/">
-            <Home />
+              <Home />
           </Route>
         </Switch>        
     </Router>
